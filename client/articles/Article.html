@@ -1,0 +1,13 @@
+<template name="Article">
+	<article class="article">
+		{{@index}}
+		<h3>{{title}}</h3>
+		<h4>{{author}}</h4>
+		<div class="test">{{readBody(body)}}</div>
+		<p>
+			{{#each tags}}
+			  {{name}}
+			{{/each}}
+		</p>
+	</article>
+</template>

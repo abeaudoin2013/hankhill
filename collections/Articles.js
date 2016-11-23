@@ -21,7 +21,24 @@ ArticleSchema = new SimpleSchema({
 	},
 	body: {
 		type: String,
-		label: "Write article here"
+		label: "Write article here",
+		autoform: {
+			afFieldInput: {
+				type: 'summernote',
+				class: 'summernote-editor',
+				settings: {
+					toolbar: [
+				    // [groupName, [list of button]]
+				    ['style', ['bold', 'italic', 'underline', 'clear', 'strikethrough', 'color']],
+				    ['fontsize', ['fontsize']],
+				    ['para', ['ul', 'ol', 'paragraph', 'height']],
+				    ['insert', ['link', 'picture']],
+				    ['misc', ['fullscreen', 'codeview', 'undo', 'redo', 'help']]
+				  ],
+				  height: 500
+				}
+			}
+		}
 	},
 	author: {
 		type: String,

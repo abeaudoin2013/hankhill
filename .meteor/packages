@@ -30,8 +30,10 @@ aldeed:collection2
 aldeed:autoform
 accounts-ui
 accounts-password
+twbs:bootstrap
 matb33:bootstrap-glyphicons
 zimme:active-route
 gwendall:auth-client-callbacks
 meteortoys:allthings
 datariot:ganalytics
+mpowaga:autoform-summernote
