@@ -1,7 +1,11 @@
+
 Template.Article.helpers({
 
-	readBody: (body) => {
-		$(".test").html(body);
-	}
+});
 
+Template.Article.onRendered(function () {
+  $(".summernote").each(function (i, div) {
+  	var text = $(div).data("body");
+  	$(div).find(".child").html(text);
+  });
 });

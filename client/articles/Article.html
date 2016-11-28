@@ -1,12 +1,11 @@
 <template name="Article">
-	<article class="article">
-		{{@index}}
-		<h3>{{title}}</h3>
-		<h4>{{author}}</h4>
-		<div class="test">{{readBody(body)}}</div>
+	<article class="Article col-md-8 col-md-offset-2">
+		<h1 class="Article--title">{{article.title}}</h1>
+		<p class="Article--author">{{article.author}}</p>
+		<div class="summernote" data-body="{{article.body}}" data-index="{{index}}"><div class="child"></div></div>
 		<p>
-			{{#each tags}}
-			  {{name}}
+			{{#each article.tags}}
+			  <span>{{name}}</span>
 			{{/each}}
 		</p>
 	</article>
