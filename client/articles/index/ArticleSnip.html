@@ -1,0 +1,15 @@
+<template name="ArticleSnip">
+
+	<div class="ArticleSnip col-md-2">
+		<a class="ArticleSnip--link" href="/article/{{article._id}}">
+			<h1 class="ArticleSnip--title">{{article.title}}</h1>
+			<p class="ArticleSnip--author">{{article.author}}</p>
+			<div class="ArticleSnip--summernote" data-body="{{article.body}}" data-index="{{index}}"><div class="ArticleSnip--summernote-child"></div></div>
+		</a>
+		<p>
+			{{#each article.tags}}
+			  <span>{{name}}</span>
+			{{/each}}
+		</p>
+	</div>
+</template>

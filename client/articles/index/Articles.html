@@ -1,0 +1,16 @@
+<template name="Articles">
+
+	<div class="row">
+		<section class="articles">
+			{{#if Template.subscriptionsReady}}
+				{{#each articles}}
+					{{> ArticleSnip article=this index=@index}}
+				{{/each}}
+			{{else}}
+				<p>Loading...</p>
+			{{/if}}
+		</section>
+
+	</div>
+
+</template>
