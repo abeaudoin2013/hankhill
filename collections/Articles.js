@@ -5,6 +5,9 @@ Articles.allow({
 	insert: function (userId, doc) {
 		// if userId exists, then you can add article
 		return !!userId;
+	},
+	update: function (userId, doc) {
+		return !!userId;
 	}
 });
 
@@ -71,5 +74,15 @@ ArticleSchema = new SimpleSchema({
 		}
 	}
 });
+
+Meteor.methods({
+	toggleFrontPage: function (id, currentState) {
+		Articles.update(id, {
+			$set: {
+				onFrontPage: !currentState
+			}
+		})
+	}
+})
 
 Articles.attachSchema( ArticleSchema );

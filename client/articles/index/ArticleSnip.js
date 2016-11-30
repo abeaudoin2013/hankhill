@@ -5,3 +5,10 @@ Template.ArticleSnip.onRendered(function () {
   	$(div).find(".ArticleSnip--summernote-child").html($(div).find($(".ArticleSnip--summernote-child")).text().split(" ").slice(0, 25).join(" ") + "...");
   });
 });
+
+Template.ArticleSnip.events({
+	'click .toggle-front': function () {
+		console.log(this.article._id);
+		Meteor.call('toggleFrontPage', this.article._id, this.article.onFrontPage)
+	}
+})

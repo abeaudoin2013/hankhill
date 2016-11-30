@@ -9,7 +9,8 @@ Template.Article.onRendered(function () {
 Template.Article.onCreated(function () {
 	var self = this;
 	self.autorun(function () {
-		self.subscribe('articles');
+		var id = FlowRouter.getParam('id');
+		self.subscribe('singleArticle', id);
 	});
 });
 
