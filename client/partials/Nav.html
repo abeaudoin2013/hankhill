@@ -7,8 +7,18 @@
  Opinion</a></li>
 			<li class="nav-list"><a href="#"><i class="fa fa-male" aria-hidden="true"></i>
  Authors</a></li>
-		  <li class="nav-list"><a href="/new"><i class="fa fa-pencil" aria-hidden="true"></i> New Article</a></li><!-- 
- 			<li class="nav-list nav-list-last">{{> loginButtons}}</li> -->
+			{{#if isInRole 'author'}}
+			  <li class="nav-list"><a href="/new"><i class="fa fa-pencil" aria-hidden="true"></i> New Article</a></li>
+			{{/if}}
+			{{#if isInRole 'admin'}}
+			  <li class="nav-list"><a href="/admin/users"><i class="fa fa-users" aria-hidden="true"></i> Users Dashboard</a></li>
+			{{/if}}
+		  {{#if currentUser}}
+				<li class="nav-list logout"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Logout</a></li>
+			{{else}}
+	 			<li class="nav-list nav-list-last login-toggle"><a href="#"><i class="fa fa-bath" aria-hidden="true"></i> Login/Sign-up</a></li>
+	 		{{/if}}
 		</ul>
 	</nav>
+	{{> LoginModal}}
 </template>

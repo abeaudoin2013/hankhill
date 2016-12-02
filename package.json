@@ -7,6 +7,21 @@
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "bcrypt": "^0.8.7",
-    "meteor-node-stubs": "~0.2.0"
-  }
+    "meteor-node-stubs": "~0.2.0",
+    "moment": "^2.17.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abeaudoin2013/hankhill.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abeaudoin2013/hankhill/issues"
+  },
+  "homepage": "https://github.com/abeaudoin2013/hankhill#readme",
+  "description": ""
 }

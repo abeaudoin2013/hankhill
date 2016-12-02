@@ -1,6 +1,8 @@
 <template name="LoginModal">
-	<div class="login-modal">
-		<i class="fa fa-close close-login"></i>
-		{{> atForm  state='signUp'}}
-	</div>
+	{{ #if $not currentUser}}
+		<div class="login-modal {{$.Session.get 'nav-toggle'}}">
+			<i class="fa fa-close close-login"></i>
+			{{> atForm }}
+		</div>
+	{{/if}}
 </template>

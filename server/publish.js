@@ -9,3 +9,9 @@ Meteor.publish('singleArticle', function (id) {
 	check(id, String);
 	return Articles.find({_id: id});
 });
+
+Meteor.publish("allUsers", function () {
+	if (Roles.userIsInRole(this.userId, 'admin')) {
+		return Meteor.users.find({});
+	}
+});
