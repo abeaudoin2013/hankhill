@@ -1,11 +1,3 @@
-
-Template.Article.onRendered(function () {
-  $(".summernote").each(function (i, div) {
-  	var text = $(div).data("body");
-  	$(div).find(".child").html(text);
-  });
-});
-
 Template.Article.onCreated(function () {
 	var self = this;
 	self.autorun(function () {
@@ -19,6 +11,23 @@ Template.Article.helpers({
 	article: () => {
 		var id = FlowRouter.getParam('id');
 		return Articles.findOne({_id: id});
+	},
+
+	renderText: (text) => {
+
+		// have to destringify html 
+
+		$("#body").html(text);
+
+	}
+
+});
+
+Template.Article.events({
+
+	'click .Article--tag ': function () {
+		Session.set('tag', $(this)[0].name);
+		FlowRouter.go('home');
 	}
 
 });

@@ -6,9 +6,9 @@ Template.ArticleSnip.onRendered(function () {
   });
 });
 
+
 Template.ArticleSnip.events({
 	'click .toggle-front': function () {
-		console.log(this.article._id);
 		Meteor.call('toggleFrontPage', this.article._id, this.article.onFrontPage)
 	}
 })

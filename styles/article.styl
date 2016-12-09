@@ -1,24 +1,46 @@
 @import 'var'
+@import 'keyframes'
 
 .articles
   margin: 25px 0 0 0;
-  .Article
-    .Article--title
-      margin: 25px 0 10px 0
-      font-size: title-size
+  #articles-tag
+    .articles-tag-span
+      background-color: red
+      color: #fff
+      padding: 5px
+    i
+      vertical-align: text-top;
+      font-size: 0.6em;
+      margin: 0 0 0 7px;
+      cursor: pointer
+
+.Article
+  .Article--title
+    margin: 25px 0 10px 0
+    font-size: title-size
+    font-family: serif-fonts
+  .summernote
+    #body
+      font-size: 21px
+      line-height: 26px
+      line-height: 1.625em
+      letter-spacing: .02em
+      font-weight: 400
+      font-style: normal
       font-family: serif-fonts
-    .summernote
-      .child
-        font-size: 21px
-        line-height: 26px
-        line-height: 1.625em
-        letter-spacing: .02em
+      letter-spacing: 1px
+      p
+        font-family: serif-fonts !important
         font-weight: 400
-        font-style: normal
-        font-family: serif-fonts
-        letter-spacing: 1px
-        p
-          font-family: serif-fonts !important
-          font-weight: 400
-          letter-spacing: .02em
-          font-size: 21px
+        letter-spacing: .02em
+        font-size: 21px
+  .Article--tags
+    margin: 15px 0 0 0
+    .Article--tag
+      background-color: red
+      padding: 5px
+      border: 1px solid #FFF
+      margin: 0 10px 0 0
+    .Article--tag:hover
+      cursor: pointer
+      animation: color-change .3s forwards
