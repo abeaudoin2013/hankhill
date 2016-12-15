@@ -1,0 +1,13 @@
+<template name="TopArticle">
+	
+	<div class="top-article">
+		<h1 class="top-article-title">{{topArticle.title}}</h1>
+		
+		<div class="top-article-body" id="top-article-body">{{topArticle.body}}</div>
+
+		{{#each topArticle.tags}}
+		  <p class="top-article-tag">{{name}}</p>
+		{{/each}}
+	</div>
+
+</template>

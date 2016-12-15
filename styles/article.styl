@@ -4,15 +4,53 @@
 .articles
   margin: 25px 0 0 0;
   #articles-tag
-    .articles-tag-span
-      background-color: red
-      color: #fff
+    margin: 20px 0 30px 0
+    .articles-tag-span-wrapper
+      border-bottom: 1px solid #000
+      padding-bottom: 8px
+      .articles-tag-span
+        background-color: red
+        color: #fff
+        padding: 5px
+      i
+        vertical-align: text-top;
+        font-size: 0.6em;
+        margin: 0 0 0 7px;
+        cursor: pointer
+  .Articles-side
+    margin: 25px 0 0 0
+    padding: 10px
+    border: 1px solid gray
+    border-radius: 5px
+    @media screen and (max-width: 991px)
+      display:none
+
+  .top-article
+    margin: 25px auto 0 auto
+    width: 85%
+    @media screen and (max-width: 991px)
+      width: 100%
+    #top-article-body
+      font-size: 21px
+      line-height: 26px
+      line-height: 1.625em
+      letter-spacing: .02em
+      font-weight: 400
+      font-style: normal
+      font-family: serif-fonts
+      letter-spacing: 1px
+      p
+        font-family: serif-fonts !important
+        font-weight: 400
+        letter-spacing: .02em
+        font-size: 21px
+    .top-article-tag
+      display: inline-block
       padding: 5px
-    i
-      vertical-align: text-top;
-      font-size: 0.6em;
-      margin: 0 0 0 7px;
+      margin: 0 5px 0 0
+    .top-article-tag:hover
       cursor: pointer
+      animation: color-change .3s forwards
 
 .Article
   .Article--title
@@ -35,11 +73,10 @@
         letter-spacing: .02em
         font-size: 21px
   .Article--tags
-    margin: 15px 0 0 0
+    margin: 15px 0 25px 0
     .Article--tag
-      background-color: red
       padding: 5px
-      border: 1px solid #FFF
+      background-color: transparent
       margin: 0 10px 0 0
     .Article--tag:hover
       cursor: pointer

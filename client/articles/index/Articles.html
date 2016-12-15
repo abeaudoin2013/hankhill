@@ -4,9 +4,19 @@
 		<section class="articles">
 			<h1 id="articles-tag"></h1>
 			{{#if Template.subscriptionsReady}}
+
+			  <div class="col-md-9 col-md-push-3">
+
+					{{> TopArticle}}
+					
+				</div>
+				
+				<div class="col-md-3 col-md-pull-9 Articles-side">
 				{{#each articles}}
-					{{> ArticleSnip article=this index=@index}}
+						{{> ArticleSnip article=this index=@index}}
 				{{/each}}
+			  </div>
+								
 			{{else}}
 				<p>Loading...</p>
 			{{/if}}

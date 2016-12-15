@@ -1,0 +1,14 @@
+<template name="Authors">
+	
+	<div class="Authors--container">
+
+		{{#each users}}
+			{{#if isAuthor}}
+				<div class="Author">
+			    <h1>{{profile.firstName}} <span>{{profile.lastName}}</span></h1>
+			  </div>
+		  {{/if}}
+		{{/each}}
+	</div>
+
+</template>

@@ -1,14 +1,14 @@
 <template name="ArticleSnip">
-	<div class="ArticleSnip col-md-2">
+	<div class="ArticleSnip">
+		<p>{{article.index}}</p>
 		<a class="ArticleSnip--link" href="/article/{{article._id}}">
 			<h1 class="ArticleSnip--title">{{article.title}}</h1>
-			<div class="ArticleSnip--summernote" data-body="{{article.body}}" data-index="{{index}}"><div id="article-{{article._id}}" class="ArticleSnip--summernote-child"></div></div>
+			<div class="ArticleSnip--summernote" data-index="{{index}}">
+				<div id="article-{{article._id}}" class="ArticleSnip--summernote-child">
+					{{article.body}}
+				</div>
+			</div>
 		</a>
-		<div class="Article-snip--tags">
-			{{#each article.tags}}
-			  <p class="Article-snip--tag">{{name}}</p>
-			{{/each}}
-		</div>
 		<!-- <button class="btn-primary toggle-front">Add to Front Page</button>
 		<button class="btn-deny toggle-front">Remove From Front Page</button> -->
 	</div>

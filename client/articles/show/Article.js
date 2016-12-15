@@ -16,11 +16,9 @@ Template.Article.helpers({
 	renderText: (text) => {
 
 		// have to destringify html 
-
 		$("#body").html(text);
 
 	}
-
 });
 
 Template.Article.events({
