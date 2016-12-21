@@ -1,0 +1,25 @@
+<template name="PendingArticles">
+	{{#if isInRole 'admin'}}
+		<h1>Articles</h1>
+		<table>
+			<tr>
+				<th>Id</th>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Created At</th>
+				<th>Approved</th>
+			</tr>
+		{{#each articles}}
+			<tr>
+				<td class="article_id"><a href="pending-article/{{_id}}">{{_id}}</a></td>
+				<td><a href="pending-article/{{_id}}">{{title}}</a></td>
+				<td>{{author}}</td>
+				<td>{{createdAt}}</td>
+				<td>{{isApproved}}</td>
+			</tr>
+		{{/each}}
+		</table>
+  {{else}}
+    <h1>You are not an admin</h1>
+	{{/if}}
+</template>

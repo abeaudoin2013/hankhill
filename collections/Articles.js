@@ -54,10 +54,13 @@ ArticleSchema = new SimpleSchema({
 			type: "hidden"
 		}
 	},
-	onFrontPage: {
+	approved: {
 		type: Boolean,
-		defaultValue: true,
+		defaultValue: false,
 		optional: true,
+		autoform: {
+			type: "hidden"
+		}
 	},
 	tags: {
 		// [subDoc] makes incrementing fields

@@ -1,7 +1,3 @@
-Template.TopArticle.onRendered(function () {
-	var text = $("#top-article-body").text();
-	$("#top-article-body").html(text);
-});
 
 Template.TopArticle.onCreated(function () {
 	var self = this;

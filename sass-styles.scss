@@ -8,37 +8,48 @@ input[type="password"] {
     padding: 10px 10px 7px;
 }
 
-.btn, button {
-    background: $action;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 800;
-    padding: 10px 51px 7px;
-    color: #FFF;
-    letter-spacing: 1px;
-    border: solid 2px $action;
-    @include trans();
-    &:hover {
-        background: $action - 30;
-        border-color: $action - 30;
-    }
+.toggle-admin {
+  background-color: #de4f4f;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 51px 7px;
+  font-weight: 800;
+  border: none;
+  display: inline-block;
+  letter-spacing: 1px;
 }
+// .btn, button {
+//     background: $action;
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     display: inline-block;
+//     font-weight: 800;
+//     padding: 10px 51px 7px;
+//     color: #FFF;
+//     letter-spacing: 1px;
+//     border: solid 2px $action;
+//     @include trans();
+//     &:hover {
+//         background: $action - 30;
+//         border-color: $action - 30;
+//     }
+// }
 
-.btn-text {
-    @extend .btn;
-    background: transparent;
-}
+// .btn-text {
+//     @extend .btn;
+//     background: transparent;
+// }
 
-.btn-primary {
-    @extend .btn;
-    background: $accent;
-    border: solid 2px $accent;
-    &:hover {
-        background: $accent - 30;
-        border-color: $accent - 30;
-    }
-}
+// .btn-primary {
+//     @extend .btn;
+//     background: $accent;
+//     border: solid 2px $accent;
+//     &:hover {
+//         background: $accent - 30;
+//         border-color: $accent - 30;
+//     }
+// }
 
 
 .header {
@@ -177,6 +188,10 @@ table {
 }
 
 .user_id {
+    color: $blue;
+    cursor: pointer;
+}
+.article_id {
     color: $blue;
     cursor: pointer;
 }
