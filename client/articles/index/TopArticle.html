@@ -1,5 +1,5 @@
 <template name="TopArticle">
-	
+	{{#if topArticle.approved}}
 	<div class="top-article">
 		<h1 class="top-article-title">{{topArticle.title}}</h1>
 		
@@ -9,5 +9,6 @@
 		  <p class="top-article-tag">{{name}}</p>
 		{{/each}}
 	</div>
+	{{/if}}
 
 </template>

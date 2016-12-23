@@ -1,4 +1,5 @@
 <template name="ArticleSnip">
+	{{#if article.approved}}
 	<div class="ArticleSnip">
 		<p>{{article.index}}</p>
 		<a class="ArticleSnip--link" href="/article/{{article._id}}">
@@ -12,4 +13,5 @@
 		<!-- <button class="btn-primary toggle-front">Add to Front Page</button>
 		<button class="btn-deny toggle-front">Remove From Front Page</button> -->
 	</div>
+	{{/if}}
 </template>

@@ -79,10 +79,10 @@ ArticleSchema = new SimpleSchema({
 });
 
 Meteor.methods({
-	toggleFrontPage: function (id, currentState) {
+	toggleApproval: function (id, currentState) {
 		Articles.update(id, {
 			$set: {
-				onFrontPage: !currentState
+				approved: !currentState
 			}
 		})
 	}
