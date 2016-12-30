@@ -43,6 +43,10 @@ ArticleSchema = new SimpleSchema({
 			}
 		}
 	},
+	lead: {
+		type: String,
+		label: "Write lead in here"
+	},
 	author: {
 		type: String,
 		label: "Author",

@@ -18,6 +18,17 @@ Template.Article.helpers({
 		// have to destringify html 
 		$("#body").html(text);
 
+	},
+	author: () => {
+		var id = FlowRouter.getParam('id');
+		var article = Articles.findOne({_id: id});
+		var author = article.author;
+	  var currentUserId = Meteor.user()._id;
+	  if (author === currentUserId) {
+	  	return true;
+	  } else {
+	  	return false;
+	  }
 	}
 });
 

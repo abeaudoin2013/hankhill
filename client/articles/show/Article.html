@@ -12,6 +12,8 @@
 			{{/each}}
 		</div>
 		<p>{{article._id}}</p>
-		{{> quickForm collection="Articles" id="a;skfjd" type="update" doc=this}}
+		{{#if author}}
+		  {{> quickForm collection="Articles" id="a;skfjd" type="update" doc=this}}
+		{{/if}}
 	</article>
 </template>
